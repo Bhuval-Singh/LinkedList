@@ -30,6 +30,17 @@ public void addLast(int data){
     tail=temp;
 
 }
+public void add(int idx,int data){
+    Node newNode=new Node(data);
+    Node temp=head;
+    int i=0;
+    while(i < idx-1){
+        temp=temp.next;
+        i++;
+    }
+    newNode.next=temp.next;
+    temp.next=newNode;
+}
 
     public void print(Node head){
         Node temp=head;
@@ -43,6 +54,7 @@ public void addLast(int data){
         ll.addFirst(2);
         ll.addFirst(3);
         ll.addLast(7);
+        ll.add(2, 7);
         ll.print(head);
     }
 }
