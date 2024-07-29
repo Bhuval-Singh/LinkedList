@@ -31,6 +31,10 @@ public void addLast(int data){
 
 }
 public void add(int idx,int data){
+    if(idx == 0){
+        addFirst(data);
+        return;
+    }
     Node newNode=new Node(data);
     Node temp=head;
     int i=0;
